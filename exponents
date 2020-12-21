@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+# Created by: Adam Diwani
+# Created on: December 21, 2020
+# This program does exponents with for loops
+
+
+def main():
+    #function does exopnents with for loops
+    
+    #input
+    number_string = input("Enter a positive number: ")
+    
+    #process
+    try:
+        number = int(number_string)
+        assert number > 0
+    
+        for loop_counter in range(number + 1):
+            number_exponent = loop_counter ** 2
+        # Output
+        print("{0}2 = {1}".format(loop_counter, number_exponent))
+        
+    except AssertionError:
+        #Output
+        print("This number is negative.")
+    except Exception:
+        #Output
+        print("This isn't a number.")
+        
+if __name__ == "__main__":
+    main()
+        
+    
